@@ -8,10 +8,11 @@ def index(request):
     # tasks = Task.objects.order_by('-id')[:1]
     return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
 
+def task(request):
+    return render(request, 'main/task.html')
 
 def about(request):
     return render(request, 'main/about.html')
-
 
 def blog(request):
     return render(request, 'main/blog.html')
