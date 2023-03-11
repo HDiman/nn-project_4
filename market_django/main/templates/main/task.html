@@ -3,5 +3,15 @@
 {% block title %} Задача {% endblock %}
 
 {% block content %}
-    <h3>Страница для задачи</h3>
+    <h3>Создать задачу</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+<!--        <input type="text" placeholder="Введите название" class="form-control"><br>-->
+<!--        <textarea placeholder="Введите описание" class="form-control"></textarea><br>-->
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+
+    </form>
 {% endblock %}
