@@ -1,9 +1,12 @@
 {% extends 'main/base.html' %}
 
-{% block title %} Главная страница {% endblock %}
+{% block title %}
+        {{ title }}
+{% endblock %}
 
 {% block content %}
 <body>
+
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
         <nav class="my-2 my-md-0 mr-md-3">
@@ -68,6 +71,21 @@
                         </div>
                 </div>
         </div>
+
+
+        {% if tasks %}
+                {% for item in tasks %}
+                <div class = "alert alert-warning mt-2">
+                        <h3>{{ item.title }}</h3>
+                        <p>{{ item.task }}</p>
+                </div>
+                {% endfor %}
+        {% else %}
+                <div class = "alert alert-warning mt-2">
+                        <h3>{{ 'Ничего нет' }}</h3>
+                </div>
+        {% endif %}
+
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
                 <div class="row">
