@@ -31,3 +31,6 @@ def about(request):
 
 def blog(request):
     return render(request, 'main/blog.html')
+
+def count(request):
+    return render(request, 'main/count.html')

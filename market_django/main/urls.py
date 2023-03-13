@@ -6,4 +6,5 @@ urlpatterns = [
     path('task', views.task, name="task"),
     path('about', views.about, name="about"),
     path('blog', views.blog, name="blog"),
+    path('count', views.count, name="count"),
 ]
