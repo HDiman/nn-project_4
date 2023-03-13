@@ -3,6 +3,20 @@
 {% block title %} Расчет {% endblock %}
 
 {% block content %}
+<meta http-equiv="refresh" content="3">
 <h3>Расчет портфеля:</h3>
+
+    {% if tasks %}
+        {% for item in tasks %}
+                <div class="alert alert-warning">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.task }}</p>
+                </div>
+        {% endfor %}
+    {% else %}
+        <div class = "alert alert-warning">
+            <h3>{{ 'Ничего нет' }}</h3>
+        </div>
+    {% endif %}
 
 {% endblock %}

@@ -72,21 +72,6 @@
                 </div>
         </div>
 
-
-        {% if tasks %}
-                {% for item in tasks %}
-                <div class = "alert alert-warning mt-2">
-                        <h3>{{ item.title }}</h3>
-                        <p>{{ item.task }}</p>
-                </div>
-                {% endfor %}
-        {% else %}
-                <div class = "alert alert-warning mt-2">
-                        <h3>{{ 'Ничего нет' }}</h3>
-                </div>
-        {% endif %}
-
-
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
                 <div class="row">
                         <div class="col-12 col-md">
@@ -125,7 +110,7 @@
         </footer>
 </div>
 
-
+<a href="Ссылка" onclick="location.reload(); alert('ok'); return false;">Обновить страницу</a>
 <div id="torrent-scanner-popup" style="display: none;"></div>
 </body>
 {% endblock %}

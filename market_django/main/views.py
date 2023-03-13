@@ -15,7 +15,7 @@ def task(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('count')
         else:
             error = "Форма была неверной"
 
@@ -33,4 +33,5 @@ def blog(request):
     return render(request, 'main/blog.html')
 
 def count(request):
-    return render(request, 'main/count.html')
+    tasks = Task.objects.all()
+    return render(request, 'main/count.html', {'title': 'Главная страница сайта', 'tasks': tasks})
