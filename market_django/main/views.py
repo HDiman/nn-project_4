@@ -1,6 +1,9 @@
+import time
+
 from django.shortcuts import render, redirect
 from .models import Task
 from .forms import TaskForm
+from time import sleep
 
 # Create your views here.
 def index(request):
@@ -35,4 +38,11 @@ def blog(request):
 def count(request):
     tasks = Task.objects.all()
     return render(request, 'main/count.html', {'title': 'Расчет', 'tasks': tasks})
+
+
+stocks = ['Аэрофлот', 'Альфабанк', 'Мосбиржа']
+num = [100, 200, 300]
+
+for i in range(len(stocks)):
+    tasks = Task.objects.create(title=stocks[i], task=num[i])
 
