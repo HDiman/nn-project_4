@@ -35,3 +35,4 @@ def blog(request):
 def count(request):
     tasks = Task.objects.all()
     return render(request, 'main/count.html', {'title': 'Расчет', 'tasks': tasks})
+

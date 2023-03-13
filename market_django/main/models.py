@@ -2,14 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Task(models.Model):
-    title = models.CharField('Название', max_length=50)
-    task = models.TextField('Описание')
+    title = models.CharField('Название актива', max_length=100)
+    task = models.IntegerField('Кол-во', max_length=100)
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name = 'Задача'
-        verbose_name_plural = 'Задачи'
+        verbose_name = 'Актив'
+        verbose_name_plural = 'Активы'
 
 

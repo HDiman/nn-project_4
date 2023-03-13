@@ -3,14 +3,14 @@
 {% block title %} Расчет {% endblock %}
 
 {% block content %}
-<meta http-equiv="refresh" content="600">
+<meta http-equiv="refresh" content="10">
 <h3>Расчет портфеля:</h3>
 
     {% if tasks %}
         {% for item in tasks %}
                 <div class="alert alert-warning">
-                    <h3>{{ item.title }}</h3>
-                    <p>{{ item.task }}</p>
+                    <h3>Акции {{ item.title }}</h3>
+                    <p>Кол-во: {{ item.task }} шт.</p>
                 </div>
         {% endfor %}
     {% else %}
